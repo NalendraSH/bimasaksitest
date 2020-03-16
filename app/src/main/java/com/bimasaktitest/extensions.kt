@@ -1,4 +1,4 @@
-package com.idepos
+package com.bimasaktitest
 
 import com.squareup.moshi.Moshi
 import java.text.NumberFormat
@@ -34,5 +34,5 @@ fun Float.formatCurrency(): String{
     return formatter.format(this).replace("Rp", "")
 }
 
-inline fun <reified T> Moshi.fromJson(json: String): T = this.adapter(T::class.java).fromJson(json)!!
+//inline fun <reified T> Moshi.fromJson(json: String): T = this.adapter(T::class.java).fromJson(json)!!
 

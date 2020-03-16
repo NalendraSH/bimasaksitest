@@ -3,7 +3,7 @@ package com.bimasaktitest.local.repositories
 import android.app.Application
 import com.bimasaktitest.local.RoomManager
 import com.bimasaktitest.local.dao.MainDao
-import com.bimasaktitest.main.MainModel
+import com.bimasaktitest.main.models.MainModel
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 

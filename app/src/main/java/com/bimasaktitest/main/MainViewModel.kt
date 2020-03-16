@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.bimasaktitest.main.models.MainModel
 import com.bimasaktitest.network.repositories.MainRepository
 import org.koin.core.KoinComponent
 import org.koin.core.inject

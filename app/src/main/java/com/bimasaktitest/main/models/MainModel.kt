@@ -1,4 +1,4 @@
-package com.bimasaktitest.main
+package com.bimasaktitest.main.models
 
 import android.os.Parcelable
 import androidx.annotation.Keep
@@ -11,6 +11,7 @@ import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import kotlinx.android.parcel.Parcelize
 import org.json.JSONObject
 
+@Keep
 object MainModel {
     @Keep
     @Parcelize
@@ -26,7 +27,8 @@ object MainModel {
                     if (arrayData.length() != 0) {
                         for (i in 0 until arrayData.length()) {
                             val moshi = Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
-                            val jsonAdapter = moshi.adapter<Data>(Data::class.java)
+                            val jsonAdapter = moshi.adapter<Data>(
+                                Data::class.java)
                             val data = jsonAdapter.fromJson(arrayData.getJSONObject(i).toString())
                             data?.let { it1 ->
                                 listData.add(it1)

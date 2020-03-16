@@ -1,7 +1,7 @@
 package com.bimasaktitest.local.dao
 
 import androidx.room.*
-import com.bimasaktitest.main.MainModel
+import com.bimasaktitest.main.models.MainModel
 
 @Dao
 interface MainDao {

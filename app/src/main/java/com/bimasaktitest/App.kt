@@ -1,6 +1,7 @@
 package com.bimasaktitest
 
 import android.app.Application
+import androidx.annotation.Keep
 import com.bimasaktitest.di.modules.appModule
 import com.bimasaktitest.di.modules.mainModule
 import com.github.kittinunf.fuel.core.FuelManager
@@ -10,6 +11,7 @@ import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
 import org.koin.core.logger.Level
 
+@Keep
 class App : Application() {
 
     override fun onCreate() {

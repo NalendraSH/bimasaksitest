@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.bimasaktitest.local.dao.MainDao
-import com.bimasaktitest.main.MainModel
+import com.bimasaktitest.main.models.MainModel
 
 @Database(entities = [MainModel.Data::class], version = 1)
 abstract class RoomManager : RoomDatabase() {

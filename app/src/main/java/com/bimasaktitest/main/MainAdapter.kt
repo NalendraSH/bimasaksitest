@@ -10,7 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bimasaktitest.R
 import com.bimasaktitest.databinding.ItemMainBinding
 import com.bimasaktitest.main.detail.DetailActivity
-import com.idepos.customFormat
+import com.bimasaktitest.customFormat
+import com.bimasaktitest.main.models.MainModel
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import kotlinx.android.synthetic.main.item_main.view.*
@@ -133,7 +134,8 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
 
         holder.itemView.card_item_main_more.setOnClickListener {
             val moshi = Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
-            val jsonAdapter = moshi.adapter<MainModel.Data>(MainModel.Data::class.java)
+            val jsonAdapter = moshi.adapter<MainModel.Data>(
+                MainModel.Data::class.java)
             val stringData: String
             if (listData[position].size > 0) {
                 stringData = jsonAdapter.toJson(listData[position][0])
